@@ -1,0 +1,376 @@
+body {
+    background-color: white;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.custom-navbar{
+    height: 4rem;
+    padding: 0;
+}
+
+.btn-outline-secondary {
+    border: none !important; /* Убираем границу у кнопки */
+    box-shadow: none !important; /* Убираем тени, если есть */
+    background: transparent; /* Чтобы кнопка "гамбургер" была прозрачной */
+}
+
+.btn-primary {
+    background-color: transparent !important; /* Новый цвет */
+    border-color: transparent !important;     /* Граница, в тон фону */
+    color: #0A4C29;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: gray;
+}
+
+.btn-secondary {
+    background-color: #0A4C29 !important; /* Новый цвет */
+    border-color: #0A4C29 !important;     /* Граница, в тон фону */
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-outline-secondary{
+    /*background-color: #0A4C29 !important; !* Новый цвет *!*/
+    color: #0A4C29 !important;
+}
+
+@font-face {
+    font-family: 'navbar-font'; /* Имя шрифта, под которым вы будете к нему обращаться */
+    src: url('Assets/PlusJakartaSans-Bold.ttf') format('ttf');
+    font-weight: 600;  /* Обычный вес (Regular) */
+    font-style: normal; /* Нормальный стиль (не italic) */
+}
+@font-face {
+    font-family: 'primary'; /* Имя шрифта, под которым вы будете к нему обращаться */
+    src: url('Assets/Figtree-Bold.ttf') format('ttf');
+    font-weight: 600;  /* Обычный вес (Regular) */
+    font-style: normal; /* Нормальный стиль (не italic) */
+}
+
+@media (max-width: 850px) {
+    /* Скрываем кнопки при узкой ширине */
+    .navbar .d-flex .button-to-hide {
+        display: none !important;
+    }
+
+    /* Показываем бургер-меню */
+    .navbar .btn-outline-secondary {
+        display: block;
+    }
+}
+
+@media (min-width: 851px) {
+    /* Показываем кнопки на большом экране */
+    .navbar .d-flex .button-to-hide{
+        display: flex !important;
+    }
+}
+
+@media (max-width: 500px) {
+    /* Показываем кнопки на большом экране */
+    .navbar .d-flex .getquote-button{
+        display: none !important;
+    }
+    .header-logo{
+        height: 30px;
+    }
+}
+
+@media (min-width: 501px) {
+    /* Показываем кнопки на большом экране */
+    .navbar .d-flex .getquote-button{
+        display: flex !important;
+    }
+}
+
+
+/* Секция, которая занимает 80vh высоты и 100% ширины */
+.first-section {
+    height: 70vh; /* примерно 750px на экране 1080px высоты */
+    width: 100vw; /* занимает всю ширину экрана */
+    display: flex; /* использование flex для центрирования, если необходимо */
+    justify-content: center; /* горизонтальное выравнивание содержимого */
+    align-items: center; /* вертикальное выравнивание содержимого */
+    overflow: hidden; /* убираем "лишние" части изображения */
+}
+
+.first-section-image {
+    width: 100%; /* изображение растягивается на всю ширину */
+    height: 100%; /* изображение растягивается на всю высоту */
+    object-fit: cover; /* сохраняем пропорции и обрезаем лишнее */
+}
+
+/* Секция с текстом */
+.second-section {
+    height: 70vh; /* Высота секции (50% от высоты экрана) */
+    width: 100vw; /* Полная ширина экрана */
+    display: flex; /* Используем Flexbox для центрирования */
+    flex-direction: column; /* Располагаем элементы (заголовок и описание) по вертикали */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    text-align: center; /* Текст выравнивается по центру */
+    padding: 20px; /* Отступы */
+    background-color: #FFFFFF; /* Бледный фон (можно заменить цвет) */
+}
+
+/* Заголовок */
+.second-section-title {
+    font-size: 2.5rem; /* Размер текста заголовка */
+    font-weight: bold; /* Полужирный текст */
+    margin-bottom: 1rem; /* Расстояние между заголовком и описанием */
+    color: #0A4C29; /* Цвет текста (например, темно-серый) */
+}
+
+/* Описание */
+.second-section-description {
+    font-size: 1.2rem; /* Размер текста описания */
+    line-height: 1.6; /* Междустрочный интервал */
+    color: #0A4C29; /* Цвет текста (например, серый) */
+    max-width: 1000px; /* Максимальная ширина блока текста */
+    /*font-family: primary, sans-serif;*/
+    font-weight: 500;
+}
+
+@media (max-width: 755px) {
+    .second-section-title{
+        font-size: 1.5rem;
+    }
+    .second-section-description{
+        font-size: 0.7rem;
+    }
+    .second-section{
+        height: 30vh;
+    }
+    .first-section{
+        height: 50vh;
+    }
+}
+
+/* Общая секция с фоновым изображением */
+.third-section {
+    height: 80vh; /* Высота секции: вся высота экрана */
+    width: 100vw; /* Ширина секции: вся ширина экрана */
+    background-image: url("Assets/third-section.png"); /* Заднее фоновое изображение */
+    background-size: cover; /* Изображение покрывает весь экран */
+    background-position: center; /* Располагаем по центру */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    position: relative; /* Чтобы наложить прозрачный фон */
+    overflow: hidden; /* Убираем лишние части */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой (0.5 - прозрачность) */
+
+}
+/* Затемняющий слой */
+.third-section::before {
+    content: ""; /* Создаем слой */
+    position: absolute; /* Абсолютное позиционирование для наложения */
+    top: 0;
+    left: 0;
+    width: 100%; /* Покрываем всю секцию */
+    height: 100%; /* Покрываем всю секцию */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет (0.5 = 50% затемнения) */
+    z-index: 1; /* Расположить слой над фоном */
+}
+
+
+/* Контейнер с текстом */
+.third-section-content-overlay {
+    position: relative; /* Чтобы текст оказался над затемнением */
+    z-index: 2; /* Размещаем текст выше слоя затемнения */
+    text-align: center; /* Текст центрирован */
+    color: #fff; /* Белый цвет текста */
+    padding: 2rem; /* Внутренние отступы */
+    border-radius: 10px; /* Немного скругляем углы */
+}
+
+/* Главный заголовок */
+.third-section-title {
+    font-size: 3rem; /* Крупный размер шрифта */
+    margin-bottom: 2rem; /* Отступ снизу */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Подзаголовки */
+.third-section-subheading {
+    font-size: 1.5rem; /* Размер шрифта для подзаголовков */
+    margin: 3rem 0; /* Расстояние между подзаголовками */
+    font-weight: 400;
+}
+
+/* Четвёртая секция (зелёный фон) */
+.fourth-section {
+    background-color: #0A4C29; /* Или любой другой зеленый цвет */
+    padding: 3rem 0; /* Отступы сверху и снизу, можно регулировать по вкусу */
+}
+
+/* Контейнер для двух подсекций (80% ширины и центрирование) */
+.fourth-section-container {
+    width: 80%;
+    margin: 0 auto; /* Горизонтальное центрирование */
+    display: flex;
+    flex-wrap: wrap; /* Чтобы при узком экране подсекции располагались друг под другом */
+    gap: 2rem;       /* Расстояние между подсекциями */
+}
+
+/* Общий стиль для подсекций */
+.fourth-section-subsection {
+    flex: 1 1 100%;  /* По умолчанию на всю ширину, можно менять в зависимости от макета */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: transparent; /* Прозрачный/тот же фон */
+    margin: 2rem;
+}
+
+/* Заголовки в подсекциях */
+.fourth-section-title {
+    font-size: 48px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #fff; /* Белый цвет текста */
+}
+
+/* Изображения в подсекциях */
+.fourth-section-image {
+    width: 100%;        /* На всю ширину контейнера */
+    height: 200px;       /* Задаём высоту для первой подсекции */
+    object-fit: cover;  /* Можно использовать для корректного отображения */
+    object-position: 50% 100%; /* 50% по горизонтали, 100% по вертикали (нижний край) */
+    margin: 2rem;
+}
+
+/* Для второй подсекции можно переопределить высоту */
+.fourth-section-subsection:nth-child(2) .fourth-section-image {
+    height: 250px; /* Устанавливаем высоту для Our Team */
+    object-fit: cover;
+    object-position: 50% 100%;
+
+}
+
+/* Кнопка во всю ширину (первая подсекция) */
+.fourth-section-button {
+    width: 100%;
+    background-color: #fff;
+    color: #0A4C29;
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Текст под фотографией во второй подсекции */
+.fourth-section-text {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+/* Пример адаптации для узких экранов */
+@media (max-width: 768px) {
+    .fourth-section-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .fourth-section-subsection {
+        width: 100%;
+    }
+}
+
+/* Обёртка для футера */
+.footer-section {
+    display: flex;             /* Горизонтальное расположение: логотип слева, блоки справа */
+    flex-wrap: wrap;           /* На маленьких экранах элементы переносятся */
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem 2rem 2rem;             /* Внутренние отступы для наглядности */
+    background-color: #000000; /* Пример фона */
+    color: white;
+    font-weight: 600;
+}
+
+/* Левая часть с логотипом */
+.footer-left {
+    flex: 0.1 1 auto;
+    margin-bottom: auto;
+}
+
+/* Стили для логотипа */
+.footer-logo {
+    max-width: 150px; /* Пример ограниченной ширины логотипа */
+    height: auto;     /* Высоту оставляем авто */
+}
+
+/* Правая часть со столбцами */
+.footer-right {
+    flex: 2 1 auto;   /* Шире, чтобы уместить заголовки и подпункты */
+    display: flex;    /* Вложенный flex для столбцов */
+    flex-wrap: wrap;  /* Перенос при узких экранах */
+    gap: 2rem;        /* Отступ между столбцами */
+}
+
+/* Каждый столбец */
+.footer-column {
+    flex: 1 1 150px; /* Можно задать минимальную ширину столбца */
+}
+
+/* Заголовок столбца */
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Список подпунктов */
+.footer-list {
+    list-style: none;   /* Убираем маркеры списка */
+    padding: 0;         /* Сбрасываем отступы */
+    margin: 0;          /* Сбрасываем отступы */
+}
+
+/* Пункты списка */
+.footer-list-item {
+    margin-bottom: 1rem; /* Небольшой отступ между элементами */
+}
+
+/* Ссылки внутри пунктов */
+.footer-list-item a {
+    text-decoration: none; /* Без подчеркивания */
+    color: white;
+    font-weight: 600;
+}
+
+.footer-list-item a:hover {
+    text-decoration: underline; /* При наведении */
+    color: white;
+    font-weight: 600;
+}
+
+.logo-in-list{
+    margin-top: 10vh;
+    display: none;
+}
+@media (max-width: 700px) {
+    .logo-in-list{
+        display: block;
+    }
+    .footer-left{
+        display: none;
+    }
+}

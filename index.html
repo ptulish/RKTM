@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка PHP и JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Навигационная панель -->
+<nav class="navbar navbar-light bg-light custom-navbar">
+    <div class="container-fluid">
+        <!-- Кнопка-гамбургер (offcanvas trigger) -->
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- Логотип / Название компании -->
+        <a class="navbar-brand me-auto" href="#">
+            <img src="Assets/logo.png" alt="Лого" height="50" class="header-logo">
+        </a>
+
+        <!-- Блок с кнопками -->
+        <div class="d-flex">
+            <button class="btn btn-primary me-2 button-to-hide">HOME</button>
+            <button class="btn btn-primary me-2 button-to-hide">ABOUT</button>
+            <button class="btn btn-primary me-2 button-to-hide">CONTACTS</button>
+            <button class="btn btn-secondary getquote-button">GET A QUOTE</button>
+        </div>
+
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <img src="Assets/logo.png" alt="Лого" height="50">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Содержимое бокового меню -->
+        <ul class="list-unstyled">
+            <li><button class="btn btn-primary w-100 mb-2">HOME</button></li>
+            <li><button class="btn btn-primary w-100 mb-2">ABOUT</button></li>
+            <li><button class="btn btn-primary w-100 mb-2">CONTACTS</button></li>
+            <li><button class="btn btn-secondary w-100">GET A QUOTE</button></li>
+        </ul>
+    </div>
+</div>
+<div class="first-section">
+    <img src="Assets/first-section.png" alt="Hero Image" class="first-section-image">
+</div>
+<div class="second-section">
+    <h1 class="second-section-title">“SONORA” - MORE THAN JUST LOGISTICS</h1>
+    <p class="second-section-description">"Sonora" is one of the most reliable and dynamic transport and logistics companies in the Baltic States
+        with more than 25 years of experience in the freight transportation industry worldwide. Unfailing quality,
+        efficient, fast, creative and professional logistics services and solutions of all kinds. Develop your business
+        while we take care of the safe delivery of your cargo to the desired destination!</p>
+</div>
+
+<div class="third-section">
+    <div class="third-section-content-overlay">
+        <h1 class="third-section-title">TRANSPORTATION SERVICES WE OFFER</h1>
+        <div class="third-section-subheadings">
+            <h3 class="third-section-subheading">RAILWAY FREIGHT</h3>
+            <h3 class="third-section-subheading">AIR FREIGHT</h3>
+            <h3 class="third-section-subheading">ROAD FREIGHT</h3>
+            <h3 class="third-section-subheading">SEA FREIGHT</h3>
+            <h3 class="third-section-subheading">PROJECT CARGO</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Четвёртая секция с зелёным фоном -->
+<div class="fourth-section">
+    <!-- Контейнер шириной 80% для двух подсекций -->
+    <div class="fourth-section-container">
+
+        <!-- Первая подсекция -->
+        <div class="fourth-section-subsection">
+            <h2 class="fourth-section-title">
+                WE ARE MEMBERS OF INTERNATIONAL<br>
+                ORGANIZATIONS IN THE LOGISTICS INDUSTRY
+            </h2>
+
+            <!-- Картинка высотой ~60px на всю ширину -->
+            <img
+                    class="fourth-section-image"
+                    src="Assets/fourth-section-first.png"
+                    alt="Membership Image"
+            >
+
+            <!-- Кнопка во всю ширину -->
+            <button class="fourth-section-button">
+                GET A QUOTE
+            </button>
+        </div>
+
+        <!-- Вторая подсекция -->
+        <div class="fourth-section-subsection">
+            <h2 class="fourth-section-title">OUR TEAM</h2>
+
+            <!-- Фотография высотой ~100px на всю ширину -->
+            <img
+                    class="fourth-section-image"
+                    src="Assets/fourth-section-second.png"
+                    alt="Team Image"
+            >
+
+            <!-- Текст под фотографией -->
+            <p class="fourth-section-text">
+                We highly value our employees, and we give each of them the opportunity
+                to develop themselves and improve, growing along with our company and
+                its development, not only domestically, but also internationally in the
+                market.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Футер -->
+<footer class="footer-section">
+    <!-- Левая часть (логотип) -->
+    <div class="footer-left">
+        <img class="footer-logo" src="Assets/logo.png" alt="Company Logo">
+    </div>
+
+    <!-- Правая часть (два заголовка с подпунктами) -->
+    <div class="footer-right">
+
+        <!-- Первый столбец с заголовком и пунктами -->
+        <div class="footer-column">
+            <h3 class="footer-heading">PAGE INFORMATION</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="#">ABOUT US</a></li>
+                <li class="footer-list-item"><a href="#">CONTACTS</a></li>
+                <li class="footer-list-item"><a href="#">SEA FREIGHT</a></li>
+                <li class="footer-list-item"><a href="#">AIR FREIGHT</a></li>
+                <li class="footer-list-item"><a href="#">ROAD FREIGHT</a></li>
+                <li class="footer-list-item"><a href="#">RAILWAY FREIGHT</a></li>
+                <li class="footer-list-item"><a href="#">CUSTOMS</a></li>
+                <li class="footer-list-item"><a href="#">WAREHOUSES</a></li>
+                <li class="footer-list-item"><a href="#">PROJECT CARGO</a></li>
+                <li class="footer-list-item"><a href="#">GENERAL TERMS</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Второй столбец с заголовком и пунктами -->
+        <div class="footer-column">
+            <h3 class="footer-heading">CONTACT INFORMATION</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="#">HEAD OFFICE</a></li>
+                <li class="footer-list-item"><a href="#">Cēsu Street 15</a></li>
+                <li class="footer-list-item"><a href="#">Riga, LV-1012, <br>Latvia</a></li>
+                <li class="footer-list-item"><a href="#">Phone: +371 66016006</a></li>
+                <li class="footer-list-item"><a href="#">E-mail: info@sonora.lv</a></li>
+            </ul>
+            <img class="footer-logo logo-in-list" src="Assets/logo.png" alt="Company Logo">
+        </div>
+
+    </div>
+</footer>
+
+<!-- Подключаем скрипт -->
+<script src="script.js"></script>
+<!-- Подключение Bootstrap JS и Popper.js через CDN (необходимо для некоторых компонентов Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
