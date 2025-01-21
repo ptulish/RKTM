@@ -78,7 +78,7 @@ html, body {
 
 @media (max-width: 500px) {
     /* Показываем кнопки на большом экране */
-    .navbar .d-flex .getquote-button{
+    .navbar .d-flex .get-quote-button{
         display: none !important;
     }
     .header-logo{
@@ -88,7 +88,7 @@ html, body {
 
 @media (min-width: 501px) {
     /* Показываем кнопки на большом экране */
-    .navbar .d-flex .getquote-button{
+    .navbar .d-flex .get-quote-button{
         display: flex !important;
     }
 }
