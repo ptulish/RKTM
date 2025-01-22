@@ -60,12 +60,12 @@
     object-position: 50% 100%;
 }
 
-.row {
+.row-contacts {
     margin: 2rem 10%;
     color: #FFFFFF;
     font-weight: 500;
 }
-.row h2 {
+.row-contacts h2 {
     margin-bottom: 4rem ;
     font-weight: 700;
 }

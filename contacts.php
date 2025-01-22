@@ -18,7 +18,7 @@ require_once 'header.php';
     <section class="contacts-main-section">
         <div class="container-fluid">
             <!-- Две колонки с заголовком и текстом -->
-            <div class="row">
+            <div class="row-contacts">
                 <div class="col-md-6">
                     <h2>Central office</h2>
                     <p>Address<br>
