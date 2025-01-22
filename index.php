@@ -3,21 +3,6 @@
 include 'header.php';
 ?>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-        <div class="offcanvas-header">
-            <img src="Assets/logo.png" alt="Лого" height="50">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <!-- Содержимое бокового меню -->
-            <ul class="list-unstyled">
-                <li><button class="btn btn-primary w-100 mb-2">HOME</button></li>
-                <li><button class="btn btn-primary w-100 mb-2">ABOUT</button></li>
-                <li><button class="btn btn-primary w-100 mb-2">CONTACTS</button></li>
-                <li><button class="btn btn-secondary w-100">GET A QUOTE</button></li>
-            </ul>
-        </div>
-    </div>
     <div class="first-section">
         <img src="Assets/first-section.png" alt="Hero Image" class="first-section-image">
     </div>

@@ -1,0 +1,82 @@
+/* Для примера стили расположены здесь,
+   но лучше вынести в ваш styles.css */
+.about-us-section {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background: url("Assets/about-us-background.png") no-repeat center center;
+    background-size: cover;
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+}
+.about-us-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% затемнение */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+}
+.about-us-section-content {
+    position: relative;
+    z-index: 1; /* чтобы контент был поверх overlay */
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    height: 400px; /* Занимаем всю высоту hero-section */
+}
+
+.about-us-section-content h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* --- Вторая секция (about-us-second-section) --- */
+.about-us-second-section {
+    padding: 60px 0; /* пример отступов сверху/снизу */
+    color: #0A4C29;
+}
+.about-us-second-section-left img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;  /* Скрываем часть, выходящую за границы */
+    object-fit: cover;   /* При необходимости сохраняет пропорции и обрезает лишнее */
+    object-position: left center; /* Сместить точку обрезки к левой стороне */
+
+}
+.about-us-second-section-right h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+.about-us-second-section-right p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* -------- Третья секция (about-us-third-section) -------- */
+.about-us-third-section {
+    padding: 4rem 10%;
+    width: 100%;
+    background-color: #0A4C29;
+    color: #FFFFFF;
+}
+.about-us-third-section h2,
+.about-us-third-section h3 {
+    text-align: left;
+    margin-bottom: 2rem; /* Обнуление отступов перед текстом */
+    margin-top: 4rem;
+    font-weight: 500;
+}
+.about-us-third-section .section-spacer {
+    margin-bottom: 1.5rem; /* Отступ между блоками */
+}
+.about-us-third-section h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}

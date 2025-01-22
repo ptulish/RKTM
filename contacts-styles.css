@@ -1,0 +1,71 @@
+/* Пример встроенных стилей, при необходимости выносите в CSS файл */
+.contacts-background{
+    background-color: #0A4C29;
+}
+/* Первая секция (фон-картинка, по центру заголовок и кнопка) */
+.contacts-hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: url("Assets/contacts-background.png") no-repeat center center;
+    background-size: cover;
+}
+.contacts-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.contacts-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    color: #fff;
+    text-align: center;
+}
+.contacts-hero-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Вторая секция (65% высота сверху + 35% снизу), условно */
+.contacts-main-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+.contacts-main-bottom {
+    flex: 0 0 35%;
+
+}
+
+.contact-us-button{
+    border-radius: 0;
+}
+
+.contacts-bottom-img {
+    display: block;
+    margin: 4rem auto;       /* Выравнивание по центру */
+    width: 80%;          /* Ширина по содержимому (можно задать при необходимости) */
+    height: 350px;        /* Фиксированная высота */
+    object-fit: cover;    /* Обрезка изображения для предотвращения искажений */
+    overflow: hidden; /* Гарантируем обрезку выходящих частей */
+    object-position: 50% 100%;
+}
+
+.row {
+    margin: 2rem 10%;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.row h2 {
+    margin-bottom: 4rem ;
+    font-weight: 700;
+}
