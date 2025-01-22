@@ -3,7 +3,7 @@ body {
 }
 html, body {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     overflow-x: hidden;
 }
 header {
@@ -380,4 +380,8 @@ header {
     .footer-left{
         display: none;
     }
+}
+
+.modal {
+    top: 100px;
 }

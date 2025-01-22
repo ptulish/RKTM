@@ -10,9 +10,77 @@ require_once 'header.php';
         <div class="contacts-hero-overlay"></div>
         <div class="contacts-hero-content">
             <h1>CONTACTS</h1>
-            <a href="#" class="btn btn-secondary contact-us-button">Contact us</a>
+            <button type="button" class="btn btn-secondary contact-us-button" data-bs-toggle="modal" data-bs-target="#contactModal">Contact us</button>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="contactForm" method="POST" action="./send_email.php" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Фамилия</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="company" class="form-label">Компания (необязательно)</label>
+                            <input type="text" class="form-control" id="company" name="company" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="orderNumber" class="form-label">Номер заказа (необязательно)</label>
+                            <input type="text" class="form-control" id="orderNumber" name="orderNumber" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Электронная почта</label>
+                            <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    placeholder="your.email@example.com"
+                                    required
+                            />
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea
+                                    class="form-control"
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    required
+                                    placeholder="Ваше сообщение..."
+                            ></textarea>
+                        </div>
+                        <?php if (isset($_GET['status'])) {
+                        if ($_GET['status'] === 'success') {
+                        echo '<div class="alert alert-success" role="alert">Сообщение успешно отправлено!</div>';
+                        } elseif ($_GET['status'] === 'error') {
+                        echo '<div class="alert alert-danger" role="alert">Произошла ошибка при отправке сообщения.</div>';
+                        }
+                        }
+                        ?>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отмена</button>
+                            <button type="submit" class="btn btn-secondary">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
     <!-- Вторая секция (верх и низ: 65% / 35%) -->
     <section class="contacts-main-section">
