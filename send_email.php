@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo $mail->ErrorInfo;
         $mail->send();
         echo "Thank you for your message. We will contact you soon.";
-            header('Location: contacts.php?status=success');
+            header('Location: index.php?status=success');
 
 
     } catch (Exception $e) {

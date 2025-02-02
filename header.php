@@ -1,38 +1,5 @@
 <?php
-// calculator.php
-//
-// Небольшой пример страницы с формой "Калькулятор фрахта"
-// и обработкой введённых данных.
 
-// Если пользователь отправил форму методом POST, выполняем расчёт.
-$resultMessage = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Получаем данные формы (с проверкой и приведением к числу).
-    $cargoWeight = isset($_POST['cargoWeight']) ? floatval($_POST['cargoWeight']) : 0;
-    $cargoDistance = isset($_POST['cargoDistance']) ? floatval($_POST['cargoDistance']) : 0;
-    $transportType = isset($_POST['transportType']) ? $_POST['transportType'] : 'air';
-
-    // Задаём условные коэффициенты для разных видов транспорта (для примера).
-    switch ($transportType) {
-        case 'sea':
-            $typeFactor = 0.02; // Меньшая стоимость за кг*км
-            break;
-        case 'road':
-            $typeFactor = 0.05;
-            break;
-        case 'rail':
-            $typeFactor = 0.04;
-            break;
-        default:
-            $typeFactor = 0.06; // Воздушный
-    }
-
-    // Простейшая формула: стоимость = вес * расстояние * коэффициент
-    $estimatedCost = $cargoWeight * $cargoDistance * $typeFactor;
-
-    // Формируем сообщение о результате.
-    $resultMessage = "Ориентировочная стоимость: " . number_format($estimatedCost, 2, '.', ' ') . " у.е.";
-}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -42,9 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проверка PHP и JavaScript</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
-    <link href="about-us-styles.css" rel="stylesheet">
+<!--    <link href="styles.css" rel="stylesheet">-->
+<!--    <link href="about-us-styles.css" rel="stylesheet">-->
     <link href="contacts-styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -59,15 +30,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             <!-- Логотип / Название компании -->
-            <a class="navbar-brand me-auto" href="#">
-                <img src="Assets/logo.png" alt="Лого" height="50" class="header-logo">
+            <a class="navbar-brand me-auto" href="#" onclick="scrollToSection(event, 'contacts')">
+                <img src="Assets/logo-green.png" alt="Лого" height="50" class="header-logo">
             </a>
 
             <!-- Блок с кнопками -->
             <div class="d-flex">
-                <a href="index.php" class="btn btn-primary me-2 button-to-hide">HOME</a>
-                <a href="about-us.php" class="btn btn-primary me-2 button-to-hide">ABOUT</a>
-                <a href="contacts.php" class="btn btn-primary me-2 button-to-hide">CONTACTS</a>
+                <a class="btn btn-primary me-2 button-to-hide" onclick="scrollToSection(event, 'home')">HOME</a>
+                <a class="btn btn-primary me-2 button-to-hide" onclick="scrollToSection(event, 'about-us')">ABOUT</a>
+                <a class="btn btn-primary me-2 button-to-hide" onclick="scrollToSection(event, 'services')">SERVICES</a>
+                <a class="btn btn-primary me-2 button-to-hide" onclick="scrollToSection(event, 'calculator')">FREIGHT CALCULATOR</a>
+                <a class="btn btn-primary me-2 button-to-hide" onclick="scrollToSection(event, 'vacancies')">VACANCIES</a>
+                <a class="btn btn-primary me-2 button-to-hide" onclick="scrollToSection(event, 'contacts')">CONTACTS</a>
                 <button type="button" class="btn btn-secondary get-quote-button" data-bs-toggle="modal" data-bs-target="#getAQuoteModal">GET A QUOTE</button>
             </div>
 

@@ -1,8 +1,9 @@
 <!-- Футер -->
+
 <footer class="footer-section">
     <!-- Левая часть (логотип) -->
     <div class="footer-left">
-        <img class="footer-logo" src="Assets/logo.png" alt="Company Logo">
+        <img class="footer-logo" src="Assets/RKTM-white1.svg" alt="Company Logo">
     </div>
 
     <!-- Правая часть (два заголовка с подпунктами) -->
@@ -36,7 +37,7 @@
                 <li class="footer-list-item"><a href="#">Phone: +371 66016006</a></li>
                 <li class="footer-list-item"><a href="#">E-mail: info@sonora.lv</a></li>
             </ul>
-            <img class="footer-logo logo-in-list" src="Assets/logo.png" alt="Company Logo">
+            <img class="footer-logo logo-in-list" src="Assets/RKTM-white1.svg" alt="Company Logo">
         </div>
 
     </div>
